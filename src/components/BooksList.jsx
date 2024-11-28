@@ -7,7 +7,7 @@ import horror from "../data/books/horror.json";
 import romance from "../data/books/romance.json";
 import scifi from "../data/books/scifi.json";
 import { Component } from "react";
-import SingleBook from "./singleBook";
+import SingleBook from "./SingleBook";
 
 class BooksList extends Component {
   state = {

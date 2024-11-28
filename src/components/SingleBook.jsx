@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Button, Card, Col } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -20,7 +21,7 @@ class SingleBook extends Component {
         <Card
           onClick={this.toggleSelected}
           className={newClass}
-          style={{ height: "480px" }}
+          style={{ height: "520px" }}
         >
           <Card.Img
             variant="top"
@@ -28,16 +29,15 @@ class SingleBook extends Component {
             style={{ height: "350px" }}
             className="p-3"
           />
-          <Card.Body className="pb-2">
+          <Card.Body className="pb-2 pt-0">
             <Card.Title
-              className="text-truncate"
+              className="text-truncate m-0"
               style={{ height: "45px", textOverflow: "ellipsis" }}
             >
               {this.props.title}
             </Card.Title>
-            <Button className=" " variant="success">
-              + add
-            </Button>
+
+            <CommentArea props={this.props.asin} />
           </Card.Body>
         </Card>
       </Col>
